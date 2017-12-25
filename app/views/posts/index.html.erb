@@ -1,6 +1,6 @@
 <div class="container">
         
-                <div class="col-md-6"> 
+                <div class="col-md-5"> 
                    <div class="row">
           <% @posts.each do |post| %>
 
@@ -27,7 +27,7 @@
                                     </div>
                                     <hr>
                                     <div class="action">
-                                      <%= link_to '', post, :method => :delete, data: {confirm: 'Eminmisin?',commit: 'Evet'},class:"glyphicon glyphicon-trash" %>
+                                      <%= link_to '', post, :method => :delete, data: {confirm: 'Emin misin?',commit: 'Evet'},class:"glyphicon glyphicon-trash" %>
                                       <%= link_to '', edit_post_path(post),class:"glyphicon glyphicon-pencil" %>
                                       <%= link_to '', post_path(post),class:"glyphicon glyphicon-hand-right" %>
                                       <hr>
@@ -50,9 +50,9 @@
         </div>
                 </div>
                 
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="row"> 
-                            <div class="panel panel-danger">
+                            <div class="panel panel-success">
                                    <div class="panel-heading">
                                              <h3 class="panel-title">Ryan Reynolds</h3>
                                               </div>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                             <div class="row"> 
-                            <div class="panel panel-danger">
+                            <div class="panel panel-success">
                                    <div class="panel-heading">
                                              <h3 class="panel-title">Marvel Comics</h3>
                                               </div>
@@ -73,5 +73,5 @@
                         </div>
      
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
                     <a href="https://hizliresim.com/vJM64v"><img src="https://i.hizliresim.com/vJM64v.jpg"></a> </div>

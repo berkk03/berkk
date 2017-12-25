@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,18 +12,25 @@
 <em><%=image_tag current_user.image.url(:mini) if current_user.image?%> </em>
 <% end %>
 			</div>
+			
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><%= link_to "Anasayfa",posts_path%></li>
-					<li><%= link_to "Hakkımda", hakkinda_path %></li>
-					<li><%= link_to "İletişim", iletisim_path %></li>
+					<li><%= link_to '',posts_path, class: "glyphicon glyphicon-home" %></li>
+					<li><%= link_to '',hakkinda_path, class: "glyphicon glyphicon-education" %></li>
+					<li><%= link_to '',iletisim_path, class: "glyphicon glyphicon-phone-alt" %></li>
 					
 				</ul>
+				<form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Ara">
+        </div>
+        
+      </form>
 				
 
 	<ul class="nav navbar-nav navbar-right">
-    <li> <%= link_to '', new_post_path, class:"glyphicon glyphicon-plus" %> </li>
+    <li> <%= link_to '', new_post_path, class:"glyphicon glyphicon-pencil" %> </li>
     <li class="dropdown">
         <% if user_signed_in? %>
         <br>
